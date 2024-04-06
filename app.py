@@ -1,24 +1,15 @@
 from flask import Flask
 
-app = Flask(__name__)
+ app = Flask(__name__)
 
-@app.route('/')
+ @app.route('/')
+
 def index():
-    return 'Welcome to the Basic Details Website'
 
-@app.route('/details')
-def details():
-    basic_details = {
-        'name': 'John Doe',
-        'age': 30,
-        'location': 'New York'
-    }
-    return f"""
-    <h1>Basic Details</h1>
-    <p>Name: {basic_details['name']}</p>
-    <p>Age: {basic_details['age']}</p>
-    <p>Location: {basic_details['location']}</p>
-    """
+    return '<h1>My Basic Details</h1><p>Name: sankar</p><p>Email: austinsankar@gmail.com</p><p>Role: DevOps</p><p>Mobile No: 9976448084'
 
+ 
 if __name__ == '__main__':
-    app.run(debug=True)
+
+    app.run(host='0.0.0.0', port=5000)
+   
